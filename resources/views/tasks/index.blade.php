@@ -58,12 +58,30 @@
 
                                     <!-- Task Delete Button -->
                                     <td>
-                                        <form action="#" method="POST">
+                                    <form action="delete/{{$task->id}}" method="POST">
+                                        @csrf
+                                        @method('delete')
                                             <button type="submit" class="btn btn-danger">
                                                 <i class="fa fa-btn fa-trash"></i>Delete
                                             </button>
                                         </form>
                                     </td>
+
+
+                                    <td>
+                                    <form action="edit/{{$task->name}}" method="POST">
+                                        @csrf
+                                        @method('edit')
+                                            <button type="submit" >
+                                                edit
+                                            </button>
+                                        </form>
+                                    </td>
+
+
+
+
+
                                 </tr>
                                 @endforeach
                                     

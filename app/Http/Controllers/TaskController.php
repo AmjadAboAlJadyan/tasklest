@@ -27,4 +27,15 @@ class TaskController extends Controller
 
         return redirect()->back();
     }
+
+    public function destory($id){
+        DB::table('tasks')->where('id','=',$id)->delete();
+
+        return redirect()->back();
+    }
+
+
+    public function edit($name){
+        
+    }
 }
