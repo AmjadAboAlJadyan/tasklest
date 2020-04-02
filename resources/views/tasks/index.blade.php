@@ -22,7 +22,7 @@
                             <label for="task-name" class="col-sm-3 control-label">Task</label>
 
                             <div class="col-sm-6">
-                                <input type="text" name="name" id="task-name" class="form-control" value="">
+                            <input type="text" name="name" id="task-name" class="form-control" value="">
                             </div>
                         </div>
 
@@ -67,21 +67,16 @@
                                         </form>
                                     </td>
 
-
                                     <td>
-                                    <form action="edit/{{$task->name}}" method="POST">
-                                        @csrf
-                                        @method('edit')
-                                            <button type="submit" >
-                                                edit
+                                        <form action="edit/{{$task->id}}" method="POST">
+                                            @csrf
+                                           {{-- @method('UPDATE') --}}
+                                         <button type="submit" class="btn btn-danger" style="background-color:blue ; border-color:blue" >
+                                                <i class="fa fa-btn fa-trash"></i>edit
                                             </button>
                                         </form>
+
                                     </td>
-
-
-
-
-
                                 </tr>
                                 @endforeach
                                     

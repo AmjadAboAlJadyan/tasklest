@@ -19,4 +19,6 @@ Route::post('store','TaskController@store');
 
 Route::delete('delete/{id}','TaskController@destory');
 
-Route::edit('edit/{name}','TaskController@edit');
+Route::post('edit/{id}','TaskController@edit');
+
+Route::post('edit/update/{id}','TaskController@update');
